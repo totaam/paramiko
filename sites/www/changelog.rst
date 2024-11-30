@@ -63,6 +63,8 @@ Changelog
 - :bug:`- major` Tweak ``ext-info-(c|s)`` detection during KEXINIT protocol
   phase; the original implementation made assumptions based on an OpenSSH
   implementation detail.
+- :bug:`2322` Fixed premature server connection closure when a client
+  attempts to send an unsupported key. Patch by ``@torkve``.
 - :release:`3.3.1 <2023-07-28>`
 - :bug:`-` Cleaned up some very old root level files, mostly just to exercise
   some of our doc build and release machinery. This changelog entry
