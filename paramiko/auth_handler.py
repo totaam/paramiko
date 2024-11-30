@@ -215,7 +215,7 @@ class AuthHandler:
         Intended for input to or verification of, key signatures.
         """
         # Use certificate contents, if available, plain pubkey otherwise
-        if key.public_blob:
+        if getattr(key, "public_blob", None):
             return key.public_blob.key_type, key.public_blob.key_blob
         else:
             return key.get_name(), key
